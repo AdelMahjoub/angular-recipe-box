@@ -1,0 +1,7 @@
+<div class="list-group">
+   <!-- structural directive, loop through recipes -->
+  <div class="list-group-item" *ngFor="let recipe of recipes; let recipeIndex = index">
+    <!-- recipe item, the index of each recipe is passed -->
+    <app-recipe-item [recipeIndex]="recipeIndex"></app-recipe-item>
+  </div>
+</div>

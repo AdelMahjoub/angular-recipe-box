@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <!-- Recipe edit modal form -->
+  <app-recipe-edit *ngIf="isOpen" [selectedRecipe]="selectedRecipe"></app-recipe-edit>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <!-- Header -->
+      <app-header></app-header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <!-- Recipes list -->
+      <app-recipe-list></app-recipe-list>
+    </div>
+  </div>
+</div>
