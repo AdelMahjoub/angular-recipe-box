@@ -4,7 +4,7 @@ import { Directive, HostBinding, HostListener, ElementRef } from '@angular/core'
   selector: '[appCollapse]'
 })
 
-// This directive is only used in mobile view to collapse the navbar
+// Collapse ingredients list
 export class CollapseDirective {
 
   constructor(private elRef: ElementRef) { }
