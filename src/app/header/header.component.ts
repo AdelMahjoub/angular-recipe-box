@@ -1,3 +1,4 @@
+import { RecipesService } from './../services/recipes.service';
 import { ModalService } from './../services/modal.sevice';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService, private recipesService: RecipesService) { }
 
   ngOnInit() {
   }
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
 
   openModal() {
     this.modalService.toggleModal.emit(true);
+    this.recipesService.selectedRecipe.emit(-1);
   }
 
 }

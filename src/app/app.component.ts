@@ -30,7 +30,12 @@ export class AppComponent implements OnInit{
     
     // Update this.selectedRecipe
     this.recipesService.selectedRecipe.subscribe((index) => {
-      this.selectedRecipe = this.recipesService.recipes[index];
+      if(index !== -1) {
+        this.selectedRecipe = this.recipesService.recipes[index];
+      } else {
+        this.selectedRecipe = null;
+      }
+      
     });
   }
 }
